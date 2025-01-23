@@ -7,7 +7,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.722755701035!2d110.3879755!3d-7.8191425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a579e35d44d27%3A0x8e5770018882b!2sPralim%20Trans!5e0!3m2!1sid!2sid!4v1737466843804!5m2!1sid!2sid"
             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="">
-            <h2 class="card-title">Alamat</h2>
+            <h2 class="card-title lg:mt-0 mt-3">Alamat</h2>
             <p>Jl. Pramuka No.5B, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55161</p>
             <div class="py-5 flex justify-start">
                 <a href="#"><!-- Whatsapp -->

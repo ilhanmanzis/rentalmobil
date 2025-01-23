@@ -18,12 +18,11 @@
         <x-slot:title>{{ $title }}</x-slot:title>
     </x-navbar>
     {{-- banner --}}
-    <?php if($title == 'Home'){ ?>
-    <x-banner></x-banner>
-    <?php }else{?>
-    <x-banner1>{{ $infoBanner }}</x-banner1>
-    <?php }
-    ?>
+    @if ($title == 'Home')
+        <x-banner></x-banner>
+    @else
+        <x-banner1>{{ $infoBanner }}</x-banner1>
+    @endif
 
     {{-- <x-banner></x-banner> --}}
 

@@ -10,7 +10,7 @@
                 <img src="/images/home/feature_01.png" class="lg:max-w-sm rounded-lg lg:ml-6 " />
                 <div>
                     <h1 class="text-3xl font-bold">Kami berkomitmen untuk memberikan pelayanan terbaik</h1>
-                    <p class="py-6">
+                    <p class="py-6 text-justify">
                         <small class="text-base font-bold">Pralim Trans</small> adalah perusahaan transportasi yang
                         berbasis
                         di Yogyakarta,
@@ -346,7 +346,7 @@
             style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="">
-            <h2 class="card-title">Alamat</h2>
+            <h2 class="card-title lg:mt-0 mt-3">Alamat</h2>
             <p>Jl. Pramuka No.5B, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55161</p>
             <div class="py-5 flex justify-start">
                 <a href="#"><!-- Whatsapp -->

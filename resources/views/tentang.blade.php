@@ -1,71 +1,23 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
-    <x-slot:infoBanner>Paket Wisata Yogyakarta</x-slot:infoBanner>
-    {{-- paket wisata --}}
-    <div class="bg-base-100 min-h-screen lg:py-24 lg:px-28 py-24 px-14">
-        <div class="hero-content text-center lg:mb-5 mb-4">
-            <h1 class="text-2xl lg:text-4xl font-bold">Paket Wisata</h1>
-        </div>
-        <div class="flex justify-between flex-wrap">
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Paket A</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <p>Toyota Avanza</p>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <hr>
-                    <p class="text-sm">Termasuk: Mobil + Driver
-                        | makanan makanan makanan makanan makanan makanan makanan Tiket Wisata | Makan Siang | BBM
-                        durasi 12
-                        jam | </p>
-                    <div class="card-actions justify-end">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Paket A</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <p>Toyota Avanza</p>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <hr>
-                    <small class="text-sm">Termasuk: Mobil + Driver | Tiket Wisata | Makan Siang | BBM durasi 12
-                        jam | </small>
-                    <div class="card-actions justify-end">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Paket A</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <p>Toyota Avanza</p>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <hr>
-                    <small class="text-sm">Termasuk: Mobil + Driver | Tiket Wisata | Makan Siang | BBM durasi 12
-                        jam | </small>
-                    <div class="card-actions justify-end">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-content text-center mt-3">
-            <button class="btn bg-sky-500 text-white hover:bg-sky-700">Lihat Selengkapnya</button>
+    <x-slot:infoBanner>Tentang Kami</x-slot:infoBanner>
+    <div class="card lg:card-side bg-base-100 shadow-xl lg:px-28 lg:py-10 px-10 py-5">
+        <img class="size-64 pr-3" src="/images/logo/logo.png" alt="Your Company">
+        <div class="ml-16 my-8">
+            <h2 class="card-title text-4xl mb-2">Pralim Trans</h2>
+            <p class="text-justify">Selamat datang di Pralim Trans, mitra terpercaya Anda dalam perjalanan di Yogyakarta
+                dan sekitarnya. Kami
+                adalah perusahaan transportasi yang berkomitmen memberikan layanan terbaik untuk kebutuhan rental mobil,
+                motor, serta paket wisata yang dirancang khusus bagi Anda.</p>
+            <p class="mt-1 font-semibold">Mengapa Memilih Pralim Trans?</p>
+            <p class="text-justify">
+                Pralim Trans menawarkan armada mobil dan motor yang lengkap, mulai dari city car hingga kendaraan
+                keluarga, serta motor untuk perjalanan singkat maupun panjang. Kami juga menyediakan paket wisata
+                menarik ke destinasi populer seperti Candi Borobudur, Pantai Parangtritis, dan wisata kuliner
+                Yogyakarta. Dengan driver profesional yang berpengalaman dan berkomitmen memberikan pelayanan terbaik,
+                perjalanan Anda dijamin nyaman dan aman. Selain itu, kami menawarkan harga yang kompetitif tanpa
+                mengurangi kualitas layanan, serta proses pemesanan yang cepat dengan dukungan pelanggan yang selalu
+                siap membantu kapan saja.</p>
         </div>
     </div>
 </x-layout>
