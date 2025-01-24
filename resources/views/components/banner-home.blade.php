@@ -1,22 +1,16 @@
 <div id="slider" class="hero min-h-screen overflow-hidden relative">
     <div id="slides" class="absolute inset-0 flex transition-transform duration-1000">
-        <div class="hero-slide flex-shrink-0 w-full h-full bg-cover bg-center"
-            style="background-image: url(/images/banner/1.webp);"></div>
-        <div class="hero-slide flex-shrink-0 w-full h-full bg-cover bg-center"
-            style="background-image: url(/images/banner/2.jpeg);"></div>
-        <div class="hero-slide flex-shrink-0 w-full h-full bg-cover bg-center"
-            style="background-image: url(/images/banner/3.jpg);"></div>
+        @foreach ($banners as $banner)
+            <div class="hero-slide flex-shrink-0 w-full h-full bg-cover bg-center"
+                style="background-image: url(/images/banner/{{ $banner['url'] }});"></div>
+        @endforeach
     </div>
     <div class="hero-overlay bg-opacity-60" style="z-index: 1;"></div>
     <div class="hero-content text-white" style="z-index: 2;">
         <div class="lg:mx-10 mx-5">
-            <h2 class="mb-5 lg:text-3xl text-xl font-bold">Butuh Kendaraan Di Yogyakarta?</h2>
-            <h1 class="mb-5 lg:text-5xl text-2xl font-bold">Rental Mobil & Motor Terlengkap Di Yogyakarta!</h1>
-            <p class="mb-5 lg:text-lg text-base text-justify">
-                Selamat datang di Pralim Trans, solusi terbaik untuk kebutuhan transportasi dan perjalanan wisata Anda.
-                Kami menyediakan layanan rental mobil & motor, paket wisata lengkap dengan driver profesional, dan
-                fasilitas terbaik untuk pengalaman perjalanan yang tak terlupakan.
-            </p>
+            <h2 class="mb-5 lg:text-3xl text-xl font-bold">{{ $profile->banner1 }}</h2>
+            <h1 class="mb-5 lg:text-5xl text-2xl font-bold">{{ $profile->banner2 }}</h1>
+            <p class="mb-5 lg:text-lg text-base text-justify">{{ $profile->banner3 }}</p>
             <a href="/kendaraan" class="btn bg-sky-600 border-none text-white hover:bg-sky-400 mr-5">Pilih Kendaraan
                 Sekarang
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"

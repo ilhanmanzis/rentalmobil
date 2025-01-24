@@ -1,11 +1,9 @@
 <div id="slider" class="hero lg:h-1/2 h-2/3 overflow-hidden relative">
     <div id="slides" class="absolute inset-0 flex transition-transform duration-1000">
-        <div class="hero-slide flex-shrink-0 w-full h-full bg-cover bg-center"
-            style="background-image: url(/images/banner/1.webp);"></div>
-        <div class="hero-slide flex-shrink-0 w-full h-full bg-cover bg-center"
-            style="background-image: url(/images/banner/2.jpeg);"></div>
-        <div class="hero-slide flex-shrink-0 w-full h-full bg-cover bg-center"
-            style="background-image: url(/images/banner/3.jpg);"></div>
+        @foreach ($banners as $banner)
+            <div class="hero-slide flex-shrink-0 w-full h-full bg-cover bg-center"
+                style="background-image: url(/images/banner/{{ $banner['url'] }});"></div>
+        @endforeach
     </div>
     <div class="hero-overlay bg-opacity-60" style="z-index: 1;"></div>
     <div class="hero-content text-white" style="z-index: 2;">

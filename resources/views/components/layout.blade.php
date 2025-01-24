@@ -19,9 +19,10 @@
     </x-navbar>
     {{-- banner --}}
     @if ($title == 'Home')
-        <x-banner></x-banner>
+        <x-banner-home>
+        </x-banner-home>
     @else
-        <x-banner1>{{ $infoBanner }}</x-banner1>
+        <x-banner-no-home>{{ $infoBanner }}</x-banner-no-home>
     @endif
 
     {{-- <x-banner></x-banner> --}}

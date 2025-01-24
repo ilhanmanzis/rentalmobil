@@ -12,117 +12,50 @@
                 kunci</button>
         </div>
         <div id="lepasMobil" class="flex justify-between flex-wrap">
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Toyotaaaa Avanza</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <small>Jam: 07:00-21:00</small>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Include: Driver | Mobil | BBM durasi 12 jam </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
+            @foreach ($mobils as $mobil)
+                <div class="card bg-base-100 w-80 shadow-xl my-5">
+                    <figure class="w-full">
+                        <img class="w-full" src="/images/mobil/{{ $mobil['foto'] }}" />
+                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ $mobil['nama'] }}</h4>
+                        <p><small class="text-base text-sky-500 font-semibold">Rp.
+                                {{ number_format($mobil['harga_driver'], 0, ',', '.') }}</small>/hari</p>
+                        <small>Jam: {{ $mobil['jam_mulai'] }}-{{ $mobil['jam_selesai'] }}</small>
+                        <small>Pintu: {{ $mobil['pintu'] }} | penumpang: {{ $mobil['penumpang'] }}</small>
+                        <p class="text-sm">Wilayah {{ $mobil['wilayah'] }}</p>
+                        <hr>
+                        <p class="text-sm">Include: Driver, {{ $mobil['include'] }} </p>
+                        <div class="card-actions justify-end mt-2">
+                            <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
+                                Sekarang</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Toyotaaaa Avanza</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <small>Jam: 07:00-21:00</small>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Include: Driver | Mobil | BBM durasi 12 jam </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Toyotaaaa Avanza</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <small>Jam: 07:00-21:00</small>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Include: Driver | Mobil | BBM durasi 12 jam </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
         <div id="driverMobil" class="flex justify-between flex-wrap">
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Toyota Avanza</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <small>Jam: 07:00-21:00</small>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Include: Lepas Kunci | Mobil | BBM durasi 12 jam </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
+            @foreach ($mobils as $mobil)
+                <div class="card bg-base-100 w-80 shadow-xl my-5">
+                    <figure style="width: 100%">
+                        <img width="100%" src="/images/mobil/{{ $mobil['foto'] }}" />
+                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ $mobil['nama'] }} </h4>
+                        <p><small class="text-base text-sky-500 font-semibold">Rp.
+                                {{ number_format($mobil['harga_lepas'], 0, ',', '.') }}</small>/hari</p>
+                        <small>Jam: {{ $mobil['jam_mulai'] }}-{{ $mobil['jam_selesai'] }}</small>
+                        <small>Pintu: {{ $mobil['pintu'] }} | penumpang: {{ $mobil['penumpang'] }}</small>
+                        <p class="text-sm">Wilayah {{ $mobil['wilayah'] }}</p>
+                        <hr>
+                        <p class="text-sm">Include: Lepas Kunci, {{ $mobil['include'] }} </p>
+                        <div class="card-actions justify-end mt-2">
+                            <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
+                                Sekarang</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Toyota Avanza</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <small>Jam: 07:00-21:00</small>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Include: Lepas Kunci | Mobil | BBM durasi 12 jam </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Toyota Avanza</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <small>Jam: 07:00-21:00</small>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Include: Lepas Kunci | Mobil | BBM durasi 12 jam </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 
@@ -133,60 +66,28 @@
             <h1 class="text-2xl lg:text-4xl font-bold">Daftar Motor</h1>
         </div>
         <div class="flex justify-between flex-wrap">
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Beat</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <small>helm: 2</small>
-                    <small>Jam: 07:00-21:00</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Termasuk: Motor | BBM 4 Liter | Lepas Kunci </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
+            @foreach ($motors as $motor)
+                <div class="card bg-base-100 w-80 shadow-xl my-5">
+                    <figure class="w-full">
+                        <img class="w-full" src="/images/motor/{{ $motor['foto'] }}" />
+                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ $motor['nama'] }}</h4>
+                        <p><small class="text-base text-sky-500 font-semibold">Rp.
+                                {{ number_format($motor['harga'], 0, ',', '.') }}</small>/hari</p>
+                        <small>helm: {{ $motor['helm'] }}</small>
+                        <small>Jam: {{ $motor['jam_mulai'] }}-{{ $motor['jam_selesai'] }}</small>
+                        <p class="text-sm">Wilayah {{ $motor['wilayah'] }}</p>
+                        <hr>
+                        <p class="text-sm">Include: {{ $motor['include'] }}</p>
+                        <div class="card-actions justify-end mt-2">
+                            <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
+                                Sekarang</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Beat</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <small>helm: 2</small>
-                    <small>Jam: 07:00-21:00</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Termasuk: Motor | BBM 4 Liter | Lepas Kunci </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Beat</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <small>helm: 2</small>
-                    <small>Jam: 07:00-21:00</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Termasuk: Motor | BBM 4 Liter | Lepas Kunci </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
 
     </div>

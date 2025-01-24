@@ -5,11 +5,11 @@
         <div class="flex h-20 items-center justify-between">
             <div class="flex items-center">
                 <div class="shrink-0 flex items-center justify-between">
-                    <img class="size-14 pr-3 w-20" src="/images/logo/logo.png" alt="Your Company">
+                    <img class="size-14 pr-3 w-20" src="/images/logo/{{ $profile->logo }}" alt="Your Company">
                     <a href="/" class="text-white rounded-md px-3 py-2 text-sm lg:text-lg font-bold "
-                        aria-current="page">PRALIM TRANS <p class="text-sm font-normal">Solusi Rental Mobil
-                            Motor
-                            Cepat & Aman </p></a>
+                        aria-current="page"><span style="text-transform: uppercase">{{ $profile->nama }}</span>
+                        <p class="text-sm font-normal">{{ $profile->slogan }}</p>
+                    </a>
                 </div>
 
             </div>

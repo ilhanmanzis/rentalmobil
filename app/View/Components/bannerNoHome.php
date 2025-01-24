@@ -2,23 +2,21 @@
 
 namespace App\View\Components;
 
-use App\Models\Profile;
+use App\Models\Banner;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class layout extends Component
+class bannerNoHome extends Component
 {
     /**
      * Create a new component instance.
      */
-
-
+    public $banners;
     public function __construct()
     {
         //
-
-
+        $this->banners = Banner::all();
     }
 
     /**
@@ -26,6 +24,6 @@ class layout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layout');
+        return view('components.banner-no-home');
     }
 }

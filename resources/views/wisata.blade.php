@@ -7,72 +7,29 @@
             <h1 class="text-2xl lg:text-4xl font-bold">Daftar Paket Wisata</h1>
         </div>
         <div class="flex justify-between flex-wrap">
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Paket A</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <p>Toyota Avanza</p>
-                    <small>Jam: 07:00-21:00</small>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Termasuk: Mobil + Driver
-                        | makanan makanan makanan makanan makanan makanan makanan Tiket Wisata | Makan Siang | BBM
-                        durasi 12
-                        jam | </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
+            @foreach ($wisatas as $wisata)
+                <div class="card bg-base-100 w-80 shadow-xl my-5">
+                    <figure class="w-full">
+                        <img class="w-full" src="/images/wisata/{{ $wisata['foto'] }}" />
+                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ $wisata['nama'] }}</h4>
+                        <p><small class="text-base text-sky-500 font-semibold">Rp.
+                                {{ number_format($wisata['harga'], 0, ',', '.') }}</small>/hari
+                        </p>
+                        <p>{{ $wisata->mobil->nama }}</p>
+                        <small>Jam: {{ $wisata->mobil->jam_mulai }}-{{ $wisata->mobil->jam_selesai }}</small>
+                        <small>Pintu: {{ $wisata->mobil->pintu }} | penumpang: {{ $wisata->mobil->penumpang }}</small>
+                        <p class="text-sm">Wilayah {{ $wisata['wilayah'] }}</p>
+                        <hr>
+                        <p class="text-sm">Include: {{ $wisata['include'] }}</p>
+                        <div class="card-actions justify-end mt-2">
+                            <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
+                                Sekarang</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Paket A</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <p>Toyota Avanza</p>
-                    <small>Jam: 07:00-21:00</small>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Termasuk: Mobil + Driver
-                        | makanan makanan makanan makanan makanan makanan makanan Tiket Wisata | Makan Siang | BBM
-                        durasi 12
-                        jam | </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card bg-base-100 w-80 shadow-xl my-5">
-                <figure>
-                    <img src="/images/banner/1.webp" />
-                </figure>
-                <div class="card-body">
-                    <h4 class="card-title">Paket A</h4>
-                    <p><small class="text-base text-sky-500 font-semibold">Rp. 300.000</small>/hari</p>
-                    <p>Toyota Avanza</p>
-                    <small>Jam: 07:00-21:00</small>
-                    <small>Pintu: 5 | penumpang: 5</small>
-                    <p class="text-sm">Wilayah Yogyakarta</p>
-                    <hr>
-                    <p class="text-sm">Termasuk: Mobil + Driver
-                        | makanan makanan makanan makanan makanan makanan makanan Tiket Wisata | Makan Siang | BBM
-                        durasi 12
-                        jam | </p>
-                    <div class="card-actions justify-end mt-2">
-                        <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                            Sekarang</button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
 
     </div>

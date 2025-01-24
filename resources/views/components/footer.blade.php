@@ -1,14 +1,14 @@
 <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
     <nav class="grid grid-flow-col gap-4">
-        <a class="link link-hover">Home</a>
-        <a class="link link-hover">Daftar Kendaraan</a>
-        <a class="link link-hover">Paket Wisata</a>
-        <a class="link link-hover">Tentang Kami</a>
-        <a class="link link-hover">Kontak</a>
+        <a href="/" class="link link-hover">Home</a>
+        <a href="/kendaraan" class="link link-hover">Daftar Kendaraan</a>
+        <a href="/wisata" class="link link-hover">Paket Wisata</a>
+        <a href="/tentang" class="link link-hover">Tentang Kami</a>
+        <a href="/kontak" class="link link-hover">Kontak</a>
     </nav>
     <nav>
         <div class="grid grid-flow-col gap-4">
-            <a href="#"><!-- Whatsapp -->
+            <a href="{{ $sosmed->url_wa }}"><!-- Whatsapp -->
                 <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -18,7 +18,7 @@
                 </span>
             </a>
 
-            <a href="#"><!-- Whatsapp -->
+            <a href="{{ $sosmed->url_fb }}">
                 <!-- Facebook -->
                 <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#1877f2] flex justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -31,7 +31,7 @@
             </a>
 
 
-            <a href="#"><!-- Instagram -->
+            <a href="{{ $sosmed->url_ig }}"><!-- Instagram -->
                 <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584] flex justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -43,7 +43,7 @@
             </a>
 
 
-            <a href="#"><!-- TikTok -->
+            <a href="{{ $sosmed->url_tt }}"><!-- TikTok -->
                 <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#6a76ac] flex justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -56,7 +56,7 @@
             </a>
 
 
-            <a href="#"><!-- X -->
+            <a href="{{ $sosmed->url_x }}"><!-- X -->
                 <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-black flex justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
