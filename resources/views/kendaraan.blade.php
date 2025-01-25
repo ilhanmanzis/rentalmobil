@@ -11,9 +11,9 @@
             <button id="driver" class="btn lg:btn-md btn-sm bg-sky-600 text-white hover:bg-sky-700">Sewa mobil lepas
                 kunci</button>
         </div>
-        <div id="lepasMobil" class="flex justify-between flex-wrap">
+        <div id="lepasMobil" class="flex justify-start flex-wrap">
             @foreach ($mobils as $mobil)
-                <div class="card bg-base-100 w-80 shadow-xl my-5">
+                <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure class="w-full">
                         <img class="w-full" src="/images/mobil/{{ $mobil['foto'] }}" />
                     </figure>
@@ -34,9 +34,9 @@
                 </div>
             @endforeach
         </div>
-        <div id="driverMobil" class="flex justify-between flex-wrap">
+        <div id="driverMobil" class="flex justify-start flex-wrap">
             @foreach ($mobils as $mobil)
-                <div class="card bg-base-100 w-80 shadow-xl my-5">
+                <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure style="width: 100%">
                         <img width="100%" src="/images/mobil/{{ $mobil['foto'] }}" />
                     </figure>
@@ -65,9 +65,9 @@
         <div class="hero-content text-center lg:mb-5 mb-4">
             <h1 class="text-2xl lg:text-4xl font-bold">Daftar Motor</h1>
         </div>
-        <div class="flex justify-between flex-wrap">
+        <div class="flex justify-start flex-wrap">
             @foreach ($motors as $motor)
-                <div class="card bg-base-100 w-80 shadow-xl my-5">
+                <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure class="w-full">
                         <img class="w-full" src="/images/motor/{{ $motor['foto'] }}" />
                     </figure>

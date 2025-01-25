@@ -21,7 +21,8 @@ class wisataFactory extends Factory
             "nama" => 'Paket A',
             "harga"    => '300000',
             "wilayah" => 'Yogyakarta',
-            "include" => ' Mobil + Driver, makanan makanan makanan makanan makanan makanan makanan Tiket Wisata, Makan Siang, BBM durasi 12 jam ',
+            "include" => 'Mobil + Driver, Makan 3x, Tiket Wisata, Makan Siang, BBM durasi 12 jam ',
+            "daftar_wisata" => 'Candi Borobudur, Pantai Indrayanti',
             "foto" => '1.webp'
         ];
     }

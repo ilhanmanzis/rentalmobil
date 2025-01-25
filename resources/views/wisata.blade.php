@@ -6,9 +6,9 @@
         <div class="hero-content text-center lg:mb-5 mb-4">
             <h1 class="text-2xl lg:text-4xl font-bold">Daftar Paket Wisata</h1>
         </div>
-        <div class="flex justify-between flex-wrap">
+        <div class="flex justify-start flex-wrap">
             @foreach ($wisatas as $wisata)
-                <div class="card bg-base-100 w-80 shadow-xl my-5">
+                <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure class="w-full">
                         <img class="w-full" src="/images/wisata/{{ $wisata['foto'] }}" />
                     </figure>
@@ -22,7 +22,25 @@
                         <small>Pintu: {{ $wisata->mobil->pintu }} | penumpang: {{ $wisata->mobil->penumpang }}</small>
                         <p class="text-sm">Wilayah {{ $wisata['wilayah'] }}</p>
                         <hr>
-                        <p class="text-sm">Include: {{ $wisata['include'] }}</p>
+                        <p class="text-sm dark:text-white font-semibold">Include: <span
+                                class="text-sm dark:text-white font-normal"><?php $listItems = explode(',', $wisata['include']); ?>
+                                <ul class="text-sm dark:text-white font-normal pl-5" style="list-style: circle;">
+                                    @foreach ($listItems as $item)
+                                        <li>{{ trim($item) }}</li>
+                                    @endforeach
+                                </ul>
+                            </span>
+                        </p>
+                        <hr>
+                        <p class="text-sm dark:text-white font-semibold">Include: <span
+                                class="text-sm dark:text-white font-normal"><?php $listWisatas = explode(',', $wisata['daftar_wisata']); ?>
+                                <ul class="text-sm dark:text-white font-normal pl-5" style="list-style: circle;">
+                                    @foreach ($listWisatas as $item)
+                                        <li>{{ trim($item) }}</li>
+                                    @endforeach
+                                </ul>
+                            </span>
+                        </p>
                         <div class="card-actions justify-end mt-2">
                             <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
                                 Sekarang</button>

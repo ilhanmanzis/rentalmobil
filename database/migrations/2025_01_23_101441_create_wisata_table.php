@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('harga');
             $table->string('wilayah');
             $table->string('include');
+            $table->string('daftar_wisata');
             $table->string('foto');
             $table->timestamps();
 
