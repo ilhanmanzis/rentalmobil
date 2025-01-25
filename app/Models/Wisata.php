@@ -11,7 +11,8 @@ class Wisata extends Model
     use HasFactory;
 
     protected $table = 'wisata';
-    protected $filelable = ["id_mobil", "nama", "harga",    "wilayah", "include", "daftar_wisata", "foto"];
+    protected $primaryKey = 'id_wisata';
+    protected $fillable = ["id_mobil", "nama", "harga",    "wilayah", "include", "daftar_wisata", "foto"];
     protected $with = ['mobil'];
 
     public function mobil(): BelongsTo

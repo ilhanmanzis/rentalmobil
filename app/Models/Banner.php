@@ -9,6 +9,7 @@ class Banner extends Model
 {
     //
     use HasFactory;
-    protected $filelable = ['url'];
+    protected $fillable = ['url'];
     protected $table = 'banner';
+    protected $primaryKey = 'id_banner';
 }

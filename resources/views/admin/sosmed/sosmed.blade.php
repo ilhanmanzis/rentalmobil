@@ -18,6 +18,24 @@
         </div>
         <!-- Breadcrumb End -->
 
+        @if (session('success'))
+            <div
+                class="flex w-full mb-3 border-l-6 border-[#34D399] bg-[#34D399] bg-opacity-[15%] px-7 py-2 shadow-md dark:bg-[#1B1B24] dark:bg-opacity-30 md:p-9">
+                <div class="mr-5 flex h-9 w-full max-w-[36px] items-center justify-center rounded-lg bg-[#34D399]">
+                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.2984 0.826822L15.2868 0.811827L15.2741 0.797751C14.9173 0.401867 14.3238 0.400754 13.9657 0.794406L5.91888 9.45376L2.05667 5.2868C1.69856 4.89287 1.10487 4.89389 0.747996 5.28987C0.417335 5.65675 0.417335 6.22337 0.747996 6.59026L0.747959 6.59029L0.752701 6.59541L4.86742 11.0348C5.14445 11.3405 5.52858 11.5 5.89581 11.5C6.29242 11.5 6.65178 11.3355 6.92401 11.035L15.2162 2.11161C15.5833 1.74452 15.576 1.18615 15.2984 0.826822Z"
+                            fill="white" stroke="white"></path>
+                    </svg>
+                </div>
+                <div class="w-full">
+                    <h5 class="text-lg font-bold text-black dark:text-[#34D399]">
+                        {{ session('success') }}
+                    </h5>
+                </div>
+            </div>
+        @endif
         <!-- ====== Form Elements Section Start -->
 
         <div class="flex flex-col gap-9">
@@ -29,7 +47,9 @@
                     </h3>
                 </div>
                 <div class="flex flex-col gap-5.5 p-6.5">
-                    <form action="" method="post">
+                    <form action="{{ route('sosmed.edit', ['id' => $sosmed['id']]) }}" method="post">
+                        @csrf
+                        @method('put')
                         <div>
                             <label class="mb-3  text-sm font-medium text-black dark:text-white flex justify-start ">
                                 <svg class="pr-3 w-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -40,7 +60,7 @@
                                 </svg>
                                 Nomor Whatshapp
                             </label>
-                            <input type="text" placeholder="...." value="{{ $sosmed['wa'] }}"
+                            <input type="text" placeholder="...." value="{{ $sosmed['wa'] }}" name="wa"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
                         <div>
@@ -53,7 +73,7 @@
                                 </svg>
                                 Url Whatshapp
                             </label>
-                            <input type="text" placeholder="..." value="{{ $sosmed['url_wa'] }}"
+                            <input type="text" placeholder="..." value="{{ $sosmed['url_wa'] }}" name="url_wa"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
                         <div>
@@ -66,7 +86,7 @@
                                 </svg>
                                 Nama Facebook
                             </label>
-                            <input type="text" placeholder="..." value="{{ $sosmed['fb'] }}"
+                            <input type="text" placeholder="..." value="{{ $sosmed['fb'] }}" name="fb"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
                         <div>
@@ -79,7 +99,7 @@
                                 </svg>
                                 Url Facebook
                             </label>
-                            <input type="text" placeholder="...." value="{{ $sosmed['url_fb'] }}"
+                            <input type="text" placeholder="...." value="{{ $sosmed['url_fb'] }}" name="url_fb"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
                         <div>
@@ -92,7 +112,7 @@
                                 </svg>
                                 Username Instagram
                             </label>
-                            <input type="text" placeholder="...." value="{{ $sosmed['ig'] }}"
+                            <input type="text" placeholder="...." value="{{ $sosmed['ig'] }}" name="ig"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
                         <div>
@@ -105,7 +125,7 @@
                                 </svg>
                                 Url Instagram
                             </label>
-                            <input type="text" placeholder="...." value="{{ $sosmed['url_ig'] }}"
+                            <input type="text" placeholder="...." value="{{ $sosmed['url_ig'] }}" name="url_ig"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
                         <div>
@@ -118,7 +138,7 @@
                                 </svg>
                                 Username Tiktok
                             </label>
-                            <input type="text" placeholder="...." value="{{ $sosmed['tt'] }}"
+                            <input type="text" placeholder="...." value="{{ $sosmed['tt'] }}" name="tt"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
                         <div>
@@ -131,7 +151,7 @@
                                 </svg>
                                 Url Tiktok
                             </label>
-                            <input type="text" placeholder="...." value="{{ $sosmed['url_tt'] }}"
+                            <input type="text" placeholder="...." value="{{ $sosmed['url_tt'] }}" name="url_tt"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
                         <div>
@@ -144,7 +164,7 @@
                                 </svg>
                                 Username X
                             </label>
-                            <input type="text" placeholder="...." value="{{ $sosmed['x'] }}"
+                            <input type="text" placeholder="...." value="{{ $sosmed['x'] }}" name="x"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
                         <div>
@@ -157,10 +177,13 @@
                                 </svg>
                                 Url X
                             </label>
-                            <input type="text" placeholder="...." value="{{ $sosmed['url_tt'] }}"
+                            <input type="text" placeholder="...." value="{{ $sosmed['url_tt'] }}" name="url_x"
                                 class="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary" />
                         </div>
-                        <button class="btn btn-info mt-8 dark:text-white w-full" type="submit">Simpan</button>
+                        <div class="w-full bg-sky-400 mt-8 rounded-md">
+                            <button class="btn btn-info text-white w-full" type="submit">Simpan</button>
+
+                        </div>
                     </form>
 
                 </div>

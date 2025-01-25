@@ -32,7 +32,7 @@
                             </span>
                         </p>
                         <hr>
-                        <p class="text-sm dark:text-white font-semibold">Include: <span
+                        <p class="text-sm dark:text-white font-semibold">Daftar Wisata: <span
                                 class="text-sm dark:text-white font-normal"><?php $listWisatas = explode(',', $wisata['daftar_wisata']); ?>
                                 <ul class="text-sm dark:text-white font-normal pl-5" style="list-style: circle;">
                                     @foreach ($listWisatas as $item)

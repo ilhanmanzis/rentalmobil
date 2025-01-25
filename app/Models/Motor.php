@@ -10,5 +10,5 @@ class Motor extends Model
     //
     protected $table = 'motor';
     use HasFactory;
-    protected $filelable = ['nama', "harga", "jam_mulai", "jam_selesai", "helm", "wilayah", "include", "foto"];
+    protected $fillable = ['nama', "harga", "jam_mulai", "jam_selesai", "helm", "wilayah", "include", "foto"];
 }

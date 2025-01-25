@@ -11,12 +11,17 @@ class SosmedController extends Controller
     /**
      * Display a listing of the resource.
      */
+    protected $db;
+    public function __construct()
+    {
+        $this->db = new Sosmed();
+    }
     public function index()
     {
         //
         $data = [
             'title' => 'Sosmed',
-            'sosmed' => Sosmed::find('1')
+            'sosmed' => $this->db->find('1')
         ];
         return view('admin/sosmed/sosmed', $data);
     }
@@ -58,7 +63,20 @@ class SosmedController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = [
+            'fb' => $request->input('fb'),
+            'url_fb' => $request->input('url_fb'),
+            'wa' => $request->input('wa'),
+            'url_wa' => $request->input('url_wa'),
+            'ig' => $request->input('ig'),
+            'url_ig' => $request->input('url_ig'),
+            'tt' => $request->input('tt'),
+            'url_tt' => $request->input('url_tt'),
+            'x' => $request->input('x'),
+            'url_x' => $request->input('url_x'),
+        ];
+        $this->db->where('id', $id)->update($data);
+        return redirect('/admin/sosmed')->with('success', 'Data berhasil diubah');
     }
 
     /**
