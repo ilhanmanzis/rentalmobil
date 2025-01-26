@@ -23,7 +23,7 @@ sebelum menjalankan, ikuti langkah berikut ini
         npm install
         ```
 
-        - generate key
+    - generate key
 
         ```
         php artisan key:generate
