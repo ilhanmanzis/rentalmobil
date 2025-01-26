@@ -23,6 +23,12 @@ sebelum menjalankan, ikuti langkah berikut ini
         npm install
         ```
 
+        - generate key
+
+        ```
+        php artisan key:generate
+        ```
+
     - migration
         ```
         php artisan migrate:fresh --seed
