@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Profile;
 use Closure;
 use App\Models\Sosmed;
 use Illuminate\Contracts\View\View;
@@ -13,10 +14,12 @@ class footer extends Component
      * Create a new component instance.
      */
     public $sosmed;
+    public $profile;
     public function __construct()
     {
         //
         $this->sosmed = Sosmed::find('1');
+        $this->profile = Profile::find('1');
     }
 
     /**

@@ -2,26 +2,22 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Models\Mobil;
-use App\Models\Motor;
-use App\Models\Wisata;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class DashboardController extends Controller
+class AuthController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+        //
         $data = [
-            'title' => 'Dashboard',
-            'wisata' => Wisata::count(),
-            'mobil' => Mobil::count(),
-            'motor' => Motor::count(),
+            'title' => 'Login'
         ];
-        return view('admin/dashboard', $data);
+        return view('admin/auth/login', $data);
     }
 
     /**
@@ -38,6 +34,14 @@ class DashboardController extends Controller
     public function store(Request $request)
     {
         //
+        //dd($request->input());
+        $data = $request->only('email', 'password');
+        if (Auth::attempt($data)) {
+            $request->session()->put('name', Auth::user()->name);
+            $request->session()->regenerate();
+            return redirect()->route('dashboard');
+        }
+        return redirect()->route('login')->with('fail', 'email or password salah');
     }
 
     /**
@@ -67,8 +71,10 @@ class DashboardController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy()
     {
         //
+        Auth::logout();
+        return redirect()->route('login');
     }
 }

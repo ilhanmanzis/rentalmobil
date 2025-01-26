@@ -23,7 +23,7 @@ class wisataFactory extends Factory
             "wilayah" => 'Yogyakarta',
             "include" => 'Mobil + Driver, Makan 3x, Tiket Wisata, Makan Siang, BBM durasi 12 jam ',
             "daftar_wisata" => 'Candi Borobudur, Pantai Indrayanti',
-            "foto" => '1.webp'
+            "foto" => '1.jpg'
         ];
     }
 }

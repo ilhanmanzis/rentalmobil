@@ -21,7 +21,7 @@ class WisataController extends Controller
     {
         $data = [
             'title' => 'Wisata',
-            'wisatas' => $this->db->all()
+            'wisatas' => $this->db->all(),
         ];
         return view('admin/wisata/wisata', $data);
     }

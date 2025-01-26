@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Models\User;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class SettingController extends Controller
 {
@@ -45,18 +47,20 @@ class SettingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
         //
+        $data = [
+            'title' => 'Profile Setting',
+            'profile' => User::find('1')
+        ];
+        return view('admin/setting/profile', $data);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+    public function edit(string $id) {}
 
     /**
      * Update the specified resource in storage.
@@ -127,5 +131,54 @@ class SettingController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function updateProfile(Request $request, string $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email'
+        ], [
+            'name.required' => 'nama tidak boleh kosong',
+            'email.required' => 'email tidak boleh kosong',
+            'email.email' => 'email harus dalam format yang valid'
+        ]);
+        $data = [
+            'name' => $request->input('name'),
+            'email' => $request->input('email')
+        ];
+        User::where('id', $id)->update($data);
+        $request->session()->put('name', $request->input('name'));
+        return redirect()->route('setting.akun')->with('success', 'Profile berhasil diperbarui');
+    }
+
+    public function updatePassword(Request $request, string $id)
+    {
+        $request->validate([
+            'oldPassword' => 'required',
+            'newPassword' => 'required|min:5',
+            'confirmNewPassword' => 'required|same:newPassword',
+        ], [
+            'oldPassword.required' => 'Password lama wajib diisi.',
+            'newPassword.required' => 'Password baru wajib diisi.',
+            'newPassword.min' => 'Password baru minimal 5 karakter.',
+            'confirmNewPassword.required' => 'Konfirmasi password baru wajib diisi.',
+            'confirmNewPassword.same' => 'Konfirmasi password baru tidak cocok.',
+        ]);
+
+        $user = User::find($id);
+
+        //validasi password lama
+        if (!Hash::check($request->input('oldPassword'), $user->password)) {
+            return back()->withErrors(['oldPassword' => 'Password lama salah']);
+        }
+
+        //update  password
+        $data = [
+            'password' => Hash::make($request->newPassword)
+        ];
+
+        User::where('id', $id)->update($data);
+        return redirect()->route('setting.akun')->with('success', 'Password berhasil diperbarui');
     }
 }

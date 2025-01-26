@@ -10,7 +10,8 @@
             <h2 class="card-title lg:mt-0 mt-3">Alamat</h2>
             <p>{{ $profile->alamat }}</p>
             <div class="py-5 flex justify-start">
-                <a href="{{ $sosmed->url_wa }}"><!-- Whatsapp -->
+                <a target="blank"
+                    href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}"><!-- Whatsapp -->
                     <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e] flex justify-start">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                             <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -22,7 +23,7 @@
                 </a>
             </div>
             <div class="flex justify-start">
-                <a href="{{ $sosmed->url_fb }}">
+                <a target="blank" href="{{ $sosmed->url_fb }}">
                     <!-- Facebook -->
                     <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#1877f2] flex justify-start">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -35,7 +36,7 @@
                 </a>
             </div>
             <div class="py-5 flex justify-start">
-                <a href="{{ $sosmed->url_ig }}"><!-- Instagram -->
+                <a target="blank" href="{{ $sosmed->url_ig }}"><!-- Instagram -->
                     <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584] flex justify-start">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -47,7 +48,7 @@
                 </a>
             </div>
             <div class="flex justify-start">
-                <a href="{{ $sosmed->url_tt }}"><!-- TikTok -->
+                <a target="blank" href="{{ $sosmed->url_tt }}"><!-- TikTok -->
                     <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#6a76ac] flex justify-start">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                             <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -60,7 +61,7 @@
                 </a>
             </div>
             <div class="py-5 flex justify-start">
-                <a href="{{ $sosmed->url_x }}"><!-- X -->
+                <a target="blank" href="{{ $sosmed->url_x }}"><!-- X -->
                     <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-black flex justify-start">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
                             <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->

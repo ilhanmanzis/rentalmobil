@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\public;
 
+use App\Models\Sosmed;
 use App\Models\Wisata;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +18,9 @@ class WisataHome extends Controller
         $data = [
             'nama' => 'halaman wisata',
             'title' => 'Paket Wisata',
-            'wisatas' => Wisata::all()
+            'wisatas' => Wisata::all(),
+            'sosmed' => Sosmed::find('1'),
+            'profile' => Profile::find('1'),
         ];
         return view('wisata', $data);
     }

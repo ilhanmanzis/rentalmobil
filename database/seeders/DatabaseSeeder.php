@@ -21,14 +21,11 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
-        Banner::factory()->count(4)->create();
-        Mobil::factory()->count(4)->create();
-        Motor::factory()->count(4)->create();
-        Wisata::factory()->count(2)->create();
+        User::factory()->create();
+        Banner::factory()->count(3)->create();
+        Mobil::factory()->count(1)->create();
+        Motor::factory()->count(1)->create();
+        Wisata::factory()->count(1)->create();
         Sosmed::factory()->create();
         Profile::factory()->create();
     }

@@ -17,7 +17,7 @@ class BannerFactory extends Factory
     public function definition(): array
     {
         return [
-            'url' => $this->faker->randomElement(['1.webp', '2.jpeg', '3.jpg'])
+            'url' => $this->faker->randomElement(['3.jpg', '1.webp', '2.jpeg'])
         ];
     }
 }

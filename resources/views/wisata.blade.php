@@ -42,8 +42,10 @@
                             </span>
                         </p>
                         <div class="card-actions justify-end mt-2">
-                            <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                                Sekarang</button>
+                            <a target="blank"
+                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $wisata['nama'] }}"
+                                class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
+                                Sekarang</a>
                         </div>
                     </div>
                 </div>

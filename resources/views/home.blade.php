@@ -15,7 +15,9 @@
                         <small class="text-base font-bold">{{ $profile->nama }}</small>
                         {{ $profile->sekilas }}
                     </p>
-                    <a href="/kontak" class="btn bg-sky-500 text-white hover:bg-sky-700">Kontak Kami</a>
+                    <a target="blank"
+                        href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta"
+                        class="btn bg-sky-500 text-white hover:bg-sky-700">Kontak Kami</a>
                 </div>
             </div>
         </div>
@@ -62,8 +64,10 @@
                             </span>
                         </p>
                         <div class="card-actions justify-end mt-2">
-                            <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                                Sekarang</button>
+                            <a target="blank"
+                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $wisata['nama'] }}"
+                                class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
+                                Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -100,8 +104,10 @@
                         <hr>
                         <p class="text-sm">Include: Driver, {{ $mobil['include'] }} </p>
                         <div class="card-actions justify-end mt-2">
-                            <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                                Sekarang</button>
+                            <a target="blank"
+                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20dengan%20driver"
+                                class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
+                                Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -123,8 +129,10 @@
                         <hr>
                         <p class="text-sm">Include: Lepas Kunci, {{ $mobil['include'] }} </p>
                         <div class="card-actions justify-end mt-2">
-                            <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                                Sekarang</button>
+                            <a target="blank"
+                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20tanpa%20driver"
+                                class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
+                                Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -200,8 +208,10 @@
                         <hr>
                         <p class="text-sm">Include: {{ $motor['include'] }}</p>
                         <div class="card-actions justify-end mt-2">
-                            <button href="#"class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
-                                Sekarang</button>
+                            <a target="blank"
+                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $motor['nama'] }}"
+                                class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
+                                Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -217,7 +227,8 @@
     <div class="card lg:card-side bg-base-100 shadow-xl lg:px-28 lg:py-10 px-10 py-5">
         <iframe class="lg:w-96 lg:h-96 w-60 h-60 mx-auto border-gray-900 border-collapse border-spacing-1 pr-10"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.722755701035!2d110.3879755!3d-7.8191425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a579e35d44d27%3A0x8e5770018882b!2sPralim%20Trans!5e0!3m2!1sid!2sid!4v1737466843804!5m2!1sid!2sid"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="">
             <h2 class="card-title lg:mt-0 mt-3">Alamat</h2>
             <p>{{ $profile->alamat }}</p>

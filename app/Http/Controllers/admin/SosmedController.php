@@ -21,7 +21,7 @@ class SosmedController extends Controller
         //
         $data = [
             'title' => 'Sosmed',
-            'sosmed' => $this->db->find('1')
+            'sosmed' => $this->db->find('1'),
         ];
         return view('admin/sosmed/sosmed', $data);
     }

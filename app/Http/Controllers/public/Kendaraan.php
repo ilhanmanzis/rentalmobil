@@ -4,6 +4,8 @@ namespace App\Http\Controllers\public;
 
 use App\Models\Mobil;
 use App\Models\Motor;
+use App\Models\Sosmed;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -19,6 +21,8 @@ class Kendaraan extends Controller
             'title' => 'Kendaraan',
             'motors' => Motor::all(),
             'mobils' => Mobil::all(),
+            'sosmed' => Sosmed::find('1'),
+            'profile' => Profile::find('1'),
         ];
         return view('kendaraan', $data);
     }

@@ -20,7 +20,7 @@ class BannerController extends Controller
     {
         $data = [
             'title' => 'Banner',
-            'banners' => $this->db->all()
+            'banners' => $this->db->all(),
         ];
         return view('admin/banner/banner', $data);
     }
