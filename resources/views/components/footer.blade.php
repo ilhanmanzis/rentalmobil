@@ -1,10 +1,10 @@
 <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
     <nav class="grid grid-flow-col gap-4">
-        <a href="/" class="link link-hover">Home</a>
-        <a href="/kendaraan" class="link link-hover">Daftar Kendaraan</a>
-        <a href="/wisata" class="link link-hover">Paket Wisata</a>
-        <a href="/tentang" class="link link-hover">Tentang Kami</a>
-        <a href="/kontak" class="link link-hover">Kontak</a>
+        <a href="{{ url('/') }}/" class="link link-hover">Home</a>
+        <a href="{{ url('/') }}/kendaraan" class="link link-hover">Daftar Kendaraan</a>
+        <a href="{{ url('/') }}/wisata" class="link link-hover">Paket Wisata</a>
+        <a href="{{ url('/') }}/tentang" class="link link-hover">Tentang Kami</a>
+        <a href="{{ url('/') }}/kontak" class="link link-hover">Kontak</a>
     </nav>
     <nav>
         <div class="grid grid-flow-col gap-4">

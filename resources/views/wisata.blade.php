@@ -10,7 +10,7 @@
             @foreach ($wisatas as $wisata)
                 <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure class="w-full">
-                        <img class="w-full" src="/images/wisata/{{ $wisata['foto'] }}" />
+                        <img class="w-full" src="{{ url('/') }}/images/wisata/{{ $wisata['foto'] }}" />
                     </figure>
                     <div class="card-body">
                         <h4 class="card-title">{{ $wisata['nama'] }}</h4>

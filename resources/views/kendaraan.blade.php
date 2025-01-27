@@ -15,7 +15,7 @@
             @foreach ($mobils as $mobil)
                 <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure class="w-full">
-                        <img class="w-full" src="/images/mobil/{{ $mobil['foto'] }}" />
+                        <img class="w-full" src="{{ url('/') }}/images/mobil/{{ $mobil['foto'] }}" />
                     </figure>
                     <div class="card-body">
                         <h4 class="card-title">{{ $mobil['nama'] }}</h4>
@@ -40,7 +40,7 @@
             @foreach ($mobils as $mobil)
                 <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure style="width: 100%">
-                        <img width="100%" src="/images/mobil/{{ $mobil['foto'] }}" />
+                        <img width="100%" src="{{ url('/') }}/images/mobil/{{ $mobil['foto'] }}" />
                     </figure>
                     <div class="card-body">
                         <h4 class="card-title">{{ $mobil['nama'] }} </h4>
@@ -73,7 +73,7 @@
             @foreach ($motors as $motor)
                 <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure class="w-full">
-                        <img class="w-full" src="/images/motor/{{ $motor['foto'] }}" />
+                        <img class="w-full" src="{{ url('/') }}/images/motor/{{ $motor['foto'] }}" />
                     </figure>
                     <div class="card-body">
                         <h4 class="card-title">{{ $motor['nama'] }}</h4>

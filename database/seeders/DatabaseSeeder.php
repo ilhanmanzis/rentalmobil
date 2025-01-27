@@ -22,11 +22,11 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create();
+        Sosmed::factory()->create();
+        Profile::factory()->create();
         Banner::factory()->count(3)->create();
         Mobil::factory()->count(1)->create();
         Motor::factory()->count(1)->create();
         Wisata::factory()->count(1)->create();
-        Sosmed::factory()->create();
-        Profile::factory()->create();
     }
 }

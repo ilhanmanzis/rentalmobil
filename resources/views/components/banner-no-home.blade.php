@@ -2,7 +2,7 @@
     <div id="slides" class="absolute inset-0 flex transition-transform duration-1000">
         @foreach ($banners as $banner)
             <div class="hero-slide flex-shrink-0 w-full h-full bg-cover bg-center"
-                style="background-image: url(/images/banner/{{ $banner['url'] }});"></div>
+                style="background-image: url({{ url('/') }}/images/banner/{{ $banner['url'] }});"></div>
         @endforeach
     </div>
     <div class="hero-overlay bg-opacity-60" style="z-index: 1;"></div>

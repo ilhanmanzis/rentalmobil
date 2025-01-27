@@ -8,7 +8,7 @@
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-36">
         <div class="hero bg-white min-h-screen">
             <div class="hero-content flex-col lg:flex-row-reverse">
-                <img src="/images/home/feature_01.png" class="lg:max-w-sm rounded-lg lg:ml-6 " />
+                <img src="{{ url('/') }}/images/home/feature_01.png" class="lg:max-w-sm rounded-lg lg:ml-6 " />
                 <div>
                     <h1 class="text-3xl font-bold">{{ $profile->sekilas_tittle }}</h1>
                     <p class="py-6 text-justify">
@@ -32,7 +32,7 @@
             @foreach ($wisatas as $wisata)
                 <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure class="w-full">
-                        <img class="w-full" src="/images/wisata/{{ $wisata['foto'] }}" />
+                        <img class="w-full" src="{{ url('/') }}/images/wisata/{{ $wisata['foto'] }}" />
                     </figure>
                     <div class="card-body">
                         <h4 class="card-title">{{ $wisata['nama'] }}</h4>
@@ -74,7 +74,8 @@
             @endforeach
         </div>
         <div class="hero-content text-center mt-3">
-            <a href="/wisata" class="btn bg-sky-500 text-white hover:bg-sky-700">Lihat Selengkapnya</a>
+            <a href="{{ url('/') }}/wisata" class="btn bg-sky-500 text-white hover:bg-sky-700">Lihat
+                Selengkapnya</a>
         </div>
     </div>
     {{-- Daftar Mobil --}}
@@ -92,7 +93,7 @@
             @foreach ($mobils as $mobil)
                 <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure class="w-full">
-                        <img class="w-full" src="/images/mobil/{{ $mobil['foto'] }}" />
+                        <img class="w-full" src="{{ url('/') }}/images/mobil/{{ $mobil['foto'] }}" />
                     </figure>
                     <div class="card-body">
                         <h4 class="card-title">{{ $mobil['nama'] }}</h4>
@@ -117,7 +118,7 @@
             @foreach ($mobils as $mobil)
                 <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure style="width: 100%">
-                        <img width="100%" src="/images/mobil/{{ $mobil['foto'] }}" />
+                        <img width="100%" src="{{ url('/') }}/images/mobil/{{ $mobil['foto'] }}" />
                     </figure>
                     <div class="card-body">
                         <h4 class="card-title">{{ $mobil['nama'] }} </h4>
@@ -183,7 +184,7 @@
         </script>
 
         <div class="hero-content text-center mt-3">
-            <a href="/kendaraan#mobil" class="btn bg-sky-600 text-white hover:bg-sky-700">Lihat
+            <a href="{{ url('/') }}/kendaraan#mobil" class="btn bg-sky-600 text-white hover:bg-sky-700">Lihat
                 Selengkapnya</a>
         </div>
     </div>
@@ -196,7 +197,7 @@
             @foreach ($motors as $motor)
                 <div class="card bg-base-100 w-80 shadow-xl my-5 lg:mx-6 mx-0">
                     <figure class="w-full">
-                        <img class="w-full" src="/images/motor/{{ $motor['foto'] }}" />
+                        <img class="w-full" src="{{ url('/') }}/images/motor/{{ $motor['foto'] }}" />
                     </figure>
                     <div class="card-body">
                         <h4 class="card-title">{{ $motor['nama'] }}</h4>
@@ -220,7 +221,8 @@
         </div>
 
         <div class="hero-content text-center mt-3">
-            <a href="/kendaraan#motor" class="btn bg-sky-600 text-white hover:bg-sky-700">Lihat Selengkapnya</a>
+            <a href="{{ url('/') }}/kendaraan#motor" class="btn bg-sky-600 text-white hover:bg-sky-700">Lihat
+                Selengkapnya</a>
         </div>
     </div>
     {{-- info kontak --}}

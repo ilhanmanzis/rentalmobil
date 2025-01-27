@@ -5,8 +5,9 @@
         <div class="flex h-20 items-center justify-between">
             <div class="flex items-center">
                 <div class="shrink-0 flex items-center justify-between">
-                    <img class="size-14 pr-3 w-20" src="/images/logo/{{ $profile->logo }}" alt="Your Company">
-                    <a href="/" class="text-white rounded-md px-3 py-2 text-sm lg:text-lg font-bold "
+                    <img class="size-14 pr-3 w-20" src="{{ url('/') }}/images/logo/{{ $profile->logo }}"
+                        alt="Your Company">
+                    <a href="{{ url('/') }}/" class="text-white rounded-md px-3 py-2 text-sm lg:text-lg font-bold "
                         aria-current="page"><span style="text-transform: uppercase">{{ $profile->nama }}</span>
                         <p class="text-sm font-normal">{{ $profile->slogan }}</p>
                     </a>
@@ -18,11 +19,11 @@
                 <div class="hidden md:block ml-auto">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                        <x-nav-link href="/kendaraan" :active="request()->is('kendaraan')">Daftar Kendaraan</x-nav-link>
-                        <x-nav-link href="/wisata" :active="request()->is('wisata')">Paket Wisata</x-nav-link>
-                        <x-nav-link href="/tentang" :active="request()->is('tentang')">Tentang Kami</x-nav-link>
-                        <x-nav-link href="/kontak" :active="request()->is('kontak')">Kontak</x-nav-link>
+                        <x-nav-link href="{{ url('/') }}/" :active="request()->is('/')">Home</x-nav-link>
+                        <x-nav-link href="{{ url('/') }}/kendaraan" :active="request()->is('kendaraan')">Daftar Kendaraan</x-nav-link>
+                        <x-nav-link href="{{ url('/') }}/wisata" :active="request()->is('wisata')">Paket Wisata</x-nav-link>
+                        <x-nav-link href="{{ url('/') }}/tentang" :active="request()->is('tentang')">Tentang Kami</x-nav-link>
+                        <x-nav-link href="{{ url('/') }}/kontak" :active="request()->is('kontak')">Kontak</x-nav-link>
 
                     </div>
                 </div>
@@ -57,11 +58,12 @@
     <div x-show="isOpen" class="md:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-sky-500 hover:text-white" -->
-            <x-nav-link href="/" :active="request()->is('/')" mobile="true">Home</x-nav-link>
-            <x-nav-link href="/kendaraan" :active="request()->is('kendaraan')" mobile="true">Daftar Kendaraan</x-nav-link>
-            <x-nav-link href="/wisata" :active="request()->is('wisata')" mobile="true">Paket Wisata</x-nav-link>
-            <x-nav-link href="/tentang" :active="request()->is('tentang')" mobile="true">Tentang Kami</x-nav-link>
-            <x-nav-link href="/kontak" :active="request()->is('kontak')" mobile="true">Kontak</x-nav-link>
+            <x-nav-link href="{{ url('/') }}/" :active="request()->is('/')" mobile="true">Home</x-nav-link>
+            <x-nav-link href="{{ url('/') }}/kendaraan" :active="request()->is('kendaraan')" mobile="true">Daftar
+                Kendaraan</x-nav-link>
+            <x-nav-link href="{{ url('/') }}/wisata" :active="request()->is('wisata')" mobile="true">Paket Wisata</x-nav-link>
+            <x-nav-link href="{{ url('/') }}/tentang" :active="request()->is('tentang')" mobile="true">Tentang Kami</x-nav-link>
+            <x-nav-link href="{{ url('/') }}/kontak" :active="request()->is('kontak')" mobile="true">Kontak</x-nav-link>
         </div>
 
     </div>
