@@ -2,12 +2,12 @@
 
 namespace App\View\Components;
 
-use App\Models\Banner;
 use Closure;
-use Illuminate\Contracts\View\View;
+use App\Models\Banner;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
-class bannerNoHome extends Component
+class BannerNoHome extends Component
 {
     /**
      * Create a new component instance.

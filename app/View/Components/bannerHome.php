@@ -2,19 +2,19 @@
 
 namespace App\View\Components;
 
+use Closure;
 use App\Models\Banner;
 use App\Models\Profile;
-use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
-class bannerHome extends Component
+class BannerHome extends Component
 {
     /**
      * Create a new component instance.
      */
-    public $banners;
     public $profile;
+    public $banners;
     public function __construct()
     {
         //
