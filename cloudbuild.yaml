@@ -34,3 +34,6 @@ steps:
 substitutions:
   _REGION: "asia-southeast2"
   _SERVICE_NAME: "laravel-app"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
