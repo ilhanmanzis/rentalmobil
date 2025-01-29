@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>{{ $title }}</title>
+    <link rel="icon" type="image/png" href="{{ url('/') }}/images/logo/{{ $profile->logo }}">
 </head>
 
 <body class="h-full">

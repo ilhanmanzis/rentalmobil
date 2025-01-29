@@ -3,17 +3,20 @@
 namespace App\View\Components;
 
 use Closure;
-use Illuminate\Contracts\View\View;
+use App\Models\Profile;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
 class Layout extends Component
 {
     /**
      * Create a new component instance.
      */
+    public $profile;
     public function __construct()
     {
         //
+        $this->profile = Profile::find('1');
     }
 
     /**
