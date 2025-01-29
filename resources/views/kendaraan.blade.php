@@ -28,7 +28,7 @@
                         <p class="text-sm">Include: Driver, {{ $mobil['include'] }} </p>
                         <div class="card-actions justify-end mt-2">
                             <a target="blank"
-                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20dengan%20driver"
+                                href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20dengan%20driver"
                                 class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
                                 Sekarang</a>
                         </div>
@@ -53,7 +53,7 @@
                         <p class="text-sm">Include: Lepas Kunci, {{ $mobil['include'] }} </p>
                         <div class="card-actions justify-end mt-2">
                             <a target="blank"
-                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20tanpa%20driver"
+                                href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20tanpa%20driver"
                                 class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
                                 Sekarang</a>
                         </div>
@@ -86,7 +86,7 @@
                         <p class="text-sm">Include: {{ $motor['include'] }}</p>
                         <div class="card-actions justify-end mt-2">
                             <a target="blank"
-                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $motor['nama'] }}"
+                                href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $motor['nama'] }}"
                                 class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
                                 Sekarang</a>
                         </div>

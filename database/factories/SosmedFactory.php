@@ -19,7 +19,7 @@ class sosmedFactory extends Factory
         return [
             //
             'wa' => '+6287871290696',
-            'url_wa' => 'https://web.whatsapp.com/send?phone=',
+            'url_wa' => 'https://api.whatsapp.com/send?phone=',
             'fb' => 'ilhan manzis',
             'url_fb' => 'https://google.com',
             'ig' => 'janggarfals',

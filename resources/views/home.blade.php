@@ -16,7 +16,7 @@
                         {{ $profile->sekilas }}
                     </p>
                     <a target="blank"
-                        href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta"
+                        href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta"
                         class="btn bg-sky-500 text-white hover:bg-sky-700">Kontak Kami</a>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                         </p>
                         <div class="card-actions justify-end mt-2">
                             <a target="blank"
-                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $wisata['nama'] }}"
+                                href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $wisata['nama'] }}"
                                 class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
                                 Sekarang</a>
                         </div>
@@ -106,7 +106,7 @@
                         <p class="text-sm">Include: Driver, {{ $mobil['include'] }} </p>
                         <div class="card-actions justify-end mt-2">
                             <a target="blank"
-                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20dengan%20driver"
+                                href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20dengan%20driver"
                                 class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
                                 Sekarang</a>
                         </div>
@@ -131,7 +131,7 @@
                         <p class="text-sm">Include: Lepas Kunci, {{ $mobil['include'] }} </p>
                         <div class="card-actions justify-end mt-2">
                             <a target="blank"
-                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20tanpa%20driver"
+                                href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $mobil['nama'] }}%20tanpa%20driver"
                                 class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
                                 Sekarang</a>
                         </div>
@@ -210,7 +210,7 @@
                         <p class="text-sm">Include: {{ $motor['include'] }}</p>
                         <div class="card-actions justify-end mt-2">
                             <a target="blank"
-                                href="https://web.whatsapp.com/send?phone={{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $motor['nama'] }}"
+                                href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}%20Yogyakarta%20saya%20mau%20sewa%20{{ $motor['nama'] }}"
                                 class="btn bg-sky-500 hover:bg-sky-700 text-white">Sewa
                                 Sekarang</a>
                         </div>
@@ -235,7 +235,7 @@
             <h2 class="card-title lg:mt-0 mt-3">Alamat</h2>
             <p>{{ $profile->alamat }}</p>
             <div class="py-5 flex justify-start">
-                <a href="{{ $sosmed->url_wa }}"><!-- Whatsapp -->
+                <a href="{{ $sosmed->url_wa }}{{ $sosmed->wa }}&text=Hallo...%20{{ $profile->nama }}"><!-- Whatsapp -->
                     <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e] flex justify-start">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
                             <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
